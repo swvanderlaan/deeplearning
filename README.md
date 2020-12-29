@@ -96,6 +96,31 @@ python test.py
 
 To `deactivate` the `deeplearning` virtual environment simply type `deactivate deeplearning`.
 
+## Step 6: get an image viewer up and running
+
+We can use the build-in deep zoomer from `openslide` to view some images locally.
+
+First install the openslide `git` in the designated `git` folder.
+
+```
+git clone https://github.com/openslide/openslide-python.git
+```
+
+Now you are ready to view some images locallly.
+
+The basic command is like below, where `-Q` stands for the quality (`100`%) in this case, and `WSI_DIRECTORY` is the directory containing slides to show.
+
+```
+python deepzoom_multiserver.py -Q 100 WSI_DIRECTORY
+```
+
+So for example in our case it would be like this.
+
+```
+python ~/git/swvanderlaan/openslide-python/examples/deepzoom/deepzoom_multiserver.py -Q 100 ~/PLINK/analyses/expressscan/Projects/slideToolKit_Development/images/
+  
+```
+
 
 --------------
 
