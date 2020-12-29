@@ -7,7 +7,7 @@ Code to recreate the `deeplearning` virtual environment is below.
 To install this git execute the following code in your designated `git` folder.
 
 ```
-git clone https://github.com/swvanderlaan/deeplearning.git
+git clone git@github.com:swvanderlaan/deeplearning.git
 cd deeplearning
 ```
 
