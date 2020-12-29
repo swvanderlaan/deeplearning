@@ -91,7 +91,7 @@ pip install -r /path/to/git-deeplearning/deeplearning.requirements.txt
 And now you should not have any problem running the following script.
 
 ```
-python test.py
+python DLTest.py
 ```
 
 To `deactivate` the `deeplearning` virtual environment simply type `deactivate deeplearning`.
