@@ -44,7 +44,7 @@ bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
 
-## Step 3
+## Step 3: install a virtual environment package
 Next install the `virtual environment` package. 
 
 ```
@@ -65,7 +65,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ```
 
 
-## Step 4
+## Step 4: create a virtual environment
 Now we are ready to create a virtual environment.
 
 ```
@@ -86,6 +86,8 @@ Then install the required packages.
 pip install -r /path/to/git-deeplearning/deeplearning.requirements.txt
 ```
 
+
+## Step 5: test the environment
 And now you should not have any problem running the following script.
 
 ```
