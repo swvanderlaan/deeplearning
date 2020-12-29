@@ -14,7 +14,7 @@ cd deeplearning
 
 --------------
 
-# Creating a virtual environment
+# Setting up
 
 ## Step 1: get brew
 Make sure you have `brew` installed.
