@@ -124,7 +124,7 @@ python ~/git/swvanderlaan/openslide-python/examples/deepzoom/deepzoom_multiserve
 
 --------------
 
-_Inspired by _
+_Inspired by_
 
 https://www.pyimagesearch.com/2019/01/30/macos-mojave-install-tensorflow-and-keras-for-deep-learning/
 
