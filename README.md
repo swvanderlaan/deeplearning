@@ -16,14 +16,56 @@ cd deeplearning
 
 # Setting up
 
-## Step 1: get brew
-Make sure you have `brew` installed.
+## Step 1: make some directories
+
+Before you start, open a Terminal (or iTerm2) on your macOS. If you have it open make sure to go to the home directory. The following command will take you there (`cd` means _change directory_). 
+
+```
+cd $HOME
+```
+
+
+Make `.ssh` directory this is necessary to store some keys needed with `ssh` for the HPC, and Git to work.
+
+```
+mkdir .ssh
+```
+
+Also make sure you have the rights set correctly.
+
+```
+chmod -vR 0700 ~/.ssh
+```
+
+Copy the necessary files to this directory.
+
+Make a `bin` directory, we will use this to make some softlinks to programs installed.
+
+```
+mkdir bin
+```
+
+Also make sure you have the rights set correctly.
+
+```
+chmod -vR 0777 ~/bin
+```
+
+
+## Step 2: get brew
+Make sure you have [`brew`](https://brew.sh) installed.
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Also install these packages through `brew`.
+Also install these packages through `brew`; you will need them somewhere down the road.
+
+```
+brew install coreutils gnu-sed rename git gd libxml2 gdal libgit2 openblas curl geos findutils zlib boost gsl bison
+```
+
+Some packages for _deep learning_ with `python` and `r` on macOS.
 
 ```
 brew install cmake pkg-config wget
@@ -31,8 +73,19 @@ brew install jpeg libpng libtiff openexr
 brew install eigen tbb hdf5
 ```
 
+Some package we use for genetics, and other 'big data' science.
 
-## Step 2: get anaconda
+```
+brew install llvm samtools bcftools vcftools 
+```
+
+Some packages to use with [`CellProfiler`](https://cellprofiler.org) and [`slideToolKit`](https://github.com/swvanderlaan/slideToolKit).
+
+```
+brew install libharu imagemagick lzo opencv libsvg
+```
+
+## Step 3: get anaconda
 Now install `anaconda` and make sure you install the `python 3.7` version, as anything higher causes issues with `TensorFlow` among others.
 
 Make sure to download the right package from the offical `anaconda` [website](https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh), this should be `Anaconda3-2019.03-MacOSX-x86_64` for `python 3.7`.
@@ -44,7 +97,7 @@ bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
 
-## Step 3: install a virtual environment package
+## Step 4: install a virtual environment package
 Next install the `virtual environment` package. 
 
 ```
@@ -65,7 +118,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ```
 
 
-## Step 4: create a virtual environment
+## Step 5: create a virtual environment
 Now we are ready to create a virtual environment.
 
 ```
@@ -87,7 +140,7 @@ pip install -r /path/to/git-deeplearning/deeplearning.requirements.txt
 ```
 
 
-## Step 5: test the environment
+## Step 6: test the environment
 And now you should not have any problem running the following script.
 
 ```
@@ -96,7 +149,7 @@ python DLTest.py
 
 To `deactivate` the `deeplearning` virtual environment simply type `deactivate deeplearning`.
 
-## Step 6: get an image viewer up and running
+## Step 7: get an image viewer up and running
 
 We can use the build-in deep zoomer from `openslide` to view some images locally.
 
@@ -136,7 +189,7 @@ https://towardsdatascience.com/how-to-successfully-install-anaconda-on-a-mac-and
 --------------
 
 #### The MIT License (MIT)
-##### Copyright (c) 1979-2020 Sander W. van der Laan | s.w.vanderlaan [at] gmail [dot] com.
+##### Copyright (c) 1979-2021 Sander W. van der Laan | s.w.vanderlaan [at] gmail [dot] com.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:   
 
