@@ -51,7 +51,7 @@ jaraco.collections==3.1.0
 jaraco.functools==3.1.0
 jaraco.text==3.4.0
 jedi==0.18.0
-Jinja2==2.11.2
+Jinja2~>2.11.2
 jmespath==0.10.0
 joblib==1.0.0
 jsonschema==3.2.0
@@ -90,7 +90,7 @@ passlib==1.7.4
 pbr==5.5.1
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==8.0.1
+Pillow~>8.0.1
 pluggy==0.13.1
 portend==2.7.0
 progressbar2==3.53.1
@@ -143,7 +143,7 @@ toml==0.10.2
 tornado==6.1
 traitlets==5.0.5
 typing-extensions==3.7.4.3
-urllib3==1.26.2
+urllib3~>1.26.2
 wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==1.0.1
