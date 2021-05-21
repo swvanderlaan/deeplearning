@@ -98,10 +98,10 @@ Some package we use for genetics, and other 'big data' science.
 brew install llvm samtools bcftools vcftools 
 ```
 
-Some packages to use with [`CellProfiler`](https://cellprofiler.org) and [`slideToolKit`](https://github.com/swvanderlaan/slideToolKit).
+Some packages to use with [`CellProfiler`](https://cellprofiler.org) and [`slideToolKit`](https://github.com/swvanderlaan/slideToolKit). Make sure you follow the required guide to install `slideToolKit` if you need this.
 
 ```
-brew install libharu imagemagick lzo opencv libsvg
+brew install libharu imagemagick lzo opencv openslide libsvg
 ```
 
 ## Step 3: get anaconda
