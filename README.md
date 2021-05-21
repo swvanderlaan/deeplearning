@@ -16,6 +16,25 @@ cd deeplearning
 
 # Setting up
 
+## Step 0: change to `bash`
+
+Since macOS Catalina the standard `shell` of Terminal is `zsh`. I prefer `bash`. You can easily [change this](https://www.cyberciti.biz/faq/change-default-shell-to-bash-on-macos-catalina/).
+
+List the available `shell` languages.
+
+```
+cat /etc/shells
+```
+
+Change the `shell` language to `bash`.
+
+```
+chsh -s /bin/bash
+```
+
+Make sure you close your Terminal to have the command take effect.
+
+
 ## Step 1: make some directories
 
 Before you start, open a Terminal (or iTerm2) on your macOS. If you have it open make sure to go to the home directory. The following command will take you there (`cd` means _change directory_). 
@@ -96,6 +115,64 @@ Next execute the following code.
 bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
+### Keep anaconda from constricting your `brew` installs
+
+Now that you have `anaconda` in combination with `brew` you will get the below message if you run `brew doctor`. 
+
+```
+brew doctor
+Please note that these warnings are just used to help the Homebrew maintainers
+with debugging if you file an issue. If everything you use Homebrew for is
+working fine: please don't worry or file an issue; just ignore this. Thanks!
+
+Warning: "config" scripts exist outside your system or Homebrew directories.
+`./configure` scripts often look for *-config scripts to determine if
+software packages are installed, and which additional flags to use when
+compiling and linking.
+
+Having additional scripts in your path can confuse software installed via
+Homebrew if the config script overrides a system or Homebrew-provided
+script of the same name. We found the following "config" scripts:
+  /Users/username/anaconda3/bin/icu-config
+  /Users/username/anaconda3/bin/krb5-config
+  /Users/username/anaconda3/bin/freetype-config
+  /Users/username/anaconda3/bin/xslt-config
+  /Users/username/anaconda3/bin/libpng16-config
+  /Users/username/anaconda3/bin/python3.7-config
+  /Users/username/anaconda3/bin/libpng-config
+  /Users/username/anaconda3/bin/xml2-config
+  /Users/username/anaconda3/bin/python3.7m-config
+  /Users/username/anaconda3/bin/python3-config
+  /Users/username/anaconda3/bin/curl-config
+  /Users/username/anaconda3/bin/ncursesw6-config
+  /Users/username/anaconda3/bin/pcre-config
+```
+
+This could be a problem, or just a nuissance. You can [change this](https://hashrocket.com/blog/posts/keep-anaconda-from-constricting-your-homebrew-installs). 
+
+You can add the lines below to your `.bashrc` file.
+
+```
+open -a BBEdit ~/.bashrc
+```
+
+(Or use another text-editor).
+
+```
+export SANS_ANACONDA="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/username/anaconda3/bin:$SANS_ANACONDA"
+
+alias perseus="export PATH="\$SANS_ANACONDA" && echo Medusa decapitated."
+alias medusa="export PATH="/Users/username/anaconda3/bin:\$SANS_ANACONDA" && echo Perseus defeated."
+
+brew () {
+  perseus
+  command brew "$@"
+  medusa
+}
+```
 
 ## Step 4: install a virtual environment package
 Next install the `virtual environment` package. 
@@ -136,7 +213,7 @@ workon deeplearning
 Then install the required packages.
 
 ```
-pip install -r /path/to/git-deeplearning/deeplearning.requirements.txt
+pip install -r /path/to/git-deeplearning/requirements.txt
 ```
 
 
