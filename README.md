@@ -101,7 +101,7 @@ bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
 Next install the `virtual environment` package. 
 
 ```
-pip install virtualenv virtualenvwrapper
+pip3 install virtualenv virtualenvwrapper
 ```
 
 Open up a `BBEdit` window to add in the following code to `.bashrc`.
