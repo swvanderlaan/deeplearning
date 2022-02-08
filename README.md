@@ -115,6 +115,8 @@ Next execute the following code.
 bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
 ```
 
+[add in Miniconda workflow; https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh]
+
 ### Keep anaconda from constricting your `brew` installs
 
 Now that you have `anaconda` in combination with `brew` you will get the below message if you run `brew doctor`. 
