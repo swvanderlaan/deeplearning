@@ -107,15 +107,19 @@ brew install libharu imagemagick lzo opencv openslide libsvg
 ## Step 3: get anaconda
 Now install `anaconda` and make sure you install the `python 3.7` version, as anything higher causes issues with `TensorFlow` among others.
 
-Make sure to download the right package from the offical `anaconda` [website](https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh), this should be `Anaconda3-2019.03-MacOSX-x86_64` for `python 3.7`.
+Make sure to download the right package from the offical `anaconda` [website](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh), this should be for `python 3.7`. You could install [`Anaconda3-2019.03-MacOSX-x86_64`](https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh) but be aware this is a quite bloated version with a lot of things you do not necessarily need.
 
 Next execute the following code.
 
 ```
-bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
+bash ~/Downloads/Miniconda3-latest-MacOSX-arm64.sh
 ```
 
-[add in Miniconda workflow; https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh]
+Or if you chose Anaconda3:
+
+```
+bash ~/Downloads/Anaconda3-2019.03-MacOSX-x86_64.sh
+```
 
 ### Keep anaconda from constricting your `brew` installs
 
