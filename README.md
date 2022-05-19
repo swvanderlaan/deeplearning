@@ -104,10 +104,10 @@ Some packages to use with [`CellProfiler`](https://cellprofiler.org) and [`slide
 brew install libharu imagemagick lzo opencv openslide libsvg
 ```
 
-## Step 3: get anaconda
-Now install `anaconda` and make sure you install the `python 3.7` version, as anything higher causes issues with `TensorFlow` among others.
+## Step 3: get conda
+Now we should install `conda`, we will have to make sure you install the `python 3.7` version, as anything higher causes issues with `TensorFlow` among others.
 
-Make sure to download the right package from the offical `anaconda` [website](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh), this should be for `python 3.7`. You could install [`Anaconda3-2019.03-MacOSX-x86_64`](https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh) but be aware this is a quite bloated version with a lot of things you do not necessarily need.
+Make sure to download the right package from the offical `miniconda` [website](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh), this should be for `python 3.7`. You could also install [`Anaconda3-2019.03-MacOSX-x86_64`](https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh) but be aware this is a quite bloated version with a lot of things you do not necessarily need.
 
 Next execute the following code.
 
