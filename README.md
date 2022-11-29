@@ -87,9 +87,7 @@ brew install coreutils gnu-sed rename git gd libxml2 gdal libgit2 openblas curl 
 Some packages for _deep learning_ with `python` and `r` on macOS.
 
 ```
-brew install cmake pkg-config wget
-brew install jpeg libpng libtiff openexr
-brew install eigen tbb hdf5
+brew install cmake pkg-config wget jpeg libpng libtiff openexr eigen tbb hdf5
 ```
 
 Some package we use for genetics, and other 'big data' science.
